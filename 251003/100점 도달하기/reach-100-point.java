@@ -4,20 +4,23 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
+        int N=sc.nextInt();
 
         for(int i=N; i<=100; i++){
+            String res="";
             if(i>=90){
-                System.out.print("A ");
+                res="A";
             }else if(i>=80){
-                System.out.print("B ");
+                res="B";
             }else if(i>=70){
-                System.out.print("C ");
+                res="C";
             }else if(i>=60){
-                System.out.print("D ");
-            }else{
-                System.out.print("F ");
+                res="D";
+            }else {
+                res="F";
             }
+            System.out.print(res+" ");
         }
+
     }
 }
