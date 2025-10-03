@@ -7,7 +7,7 @@ public class Main {
         int sum=0;
         int N=sc.nextInt();
         while(sc.hasNext()){
-            int a=sc.next();
+            int a=sc.nextInt();
             sum+=a;
         }
         System.out.println(sum);
