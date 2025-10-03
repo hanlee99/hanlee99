@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         for(int i=5; i<=17; i++){
-            System.out.println(i+" "); 
+            System.out.print(i+" "); 
         }   
     }
 }
