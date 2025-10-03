@@ -6,7 +6,7 @@ public class Main {
         int a=sc.nextInt();
         String[] students = {"John", "Tom", "Paul"};
 
-        String student = a>0 && a<4 ? students[a] : "Vacancy";
+        String student = a>0 && a<4 ? students[a-1] : "Vacancy";
         
         System.out.println(student);
     }
