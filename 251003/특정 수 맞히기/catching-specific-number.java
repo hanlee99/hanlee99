@@ -3,17 +3,19 @@ public class Main {
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
-        int com=0;
+
         while(sc.hasNext()){
-            com  = sc.nextInt();
-            if(com > 25){
-                System.out.println("Lower");
-            }else if(com == 25){
+            int a=sc.nextInt();
+            String res="";
+            if(a>25){
+                res="Lower";
+            }else if(a==25){
                 System.out.println("Good");
                 break;
             }else{
-                System.out.println("Higher");
+                res="Higher";
             }
+            System.out.println(res);
         }
 
     }
