@@ -5,6 +5,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String st = sc.next();
         String st2=sc.next();
-        System.out.println(st2+st);
+        System.out.println(st2+"\n"+st);
     }
 }
