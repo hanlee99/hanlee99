@@ -8,7 +8,8 @@ public class Main {
         int N=sc.nextInt();
         while(sc.hasNext()){
             int a=sc.nextInt();
-            sum+=a;
+            if(a%2!=0 && a%3==0)
+                sum+=a;
         }
         System.out.println(sum);
 
