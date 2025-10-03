@@ -12,7 +12,7 @@ public class Main {
         }else if(a>=500){
             res="pen";
         }else{
-            "no";
+            res="no";
         }
         
         System.out.println(res);
