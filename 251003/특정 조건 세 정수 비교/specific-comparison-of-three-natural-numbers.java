@@ -7,8 +7,9 @@ public class Main {
         int a=sc.nextInt();
         int b=sc.nextInt();
         int c=sc.nextInt();
-        int res = a==(Math.min(Math.min(a,b),c)) ? 1 : 0;
-        System.out.println(res);
+        int res1 = a==(Math.min(Math.min(a,b),c)) ? 1 : 0;
+        int res2 = a==b&&b==c ? 1 : 0;
+        System.out.println(res1 + " " + res2);
         
     }
 }
