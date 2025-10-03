@@ -6,11 +6,11 @@ public class Main {
 
         int A=sc.nextInt();
         int B=sc.nextInt();
-
         while(A<=B){
             System.out.print(A + " ");
-            int com = A%2==0 ? 3 : A;
-            A+=com;
+            A = A%2==0 ? A+3 : A+A;
         }
+
+
     }
 }
