@@ -5,7 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int a=sc.nextInt();
-        String res = (a%2!=0&&a%3==0) || (a%2==0&&a%5==0) ? 1 : 0;
+        String res = (a%2!=0&&a%3==0) || (a%2==0&&a%5==0) ? 
+        "true" : "false";
         System.out.println(res);
     }
 }
