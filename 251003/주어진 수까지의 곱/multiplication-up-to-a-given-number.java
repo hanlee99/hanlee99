@@ -4,7 +4,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int sum=0;
+        int sum=1;
         int A=sc.nextInt();
         int B=sc.nextInt();
         
