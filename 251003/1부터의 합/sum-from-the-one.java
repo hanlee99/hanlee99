@@ -4,13 +4,16 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
         int sum=0;
-        int i=1;
-        while(sum+i<N){
+        int N=sc.nextInt();
+        
+        for(int i=1; i<=N; i++){
             sum+=i;
-            i++;
+            if(sum>=N){
+                System.out.println(i);
+                break;
+            }
         }
-        System.out.println(i);
+
     }
 }
