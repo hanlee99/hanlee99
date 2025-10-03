@@ -4,27 +4,18 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int a=sc.nextInt();
-        int b=sc.nextInt();
-        String head=a/b+"";
-        a%=b;
+        int A=sc.nextInt();
+        int B=sc.nextInt();
+        String head=A/B+"";
+        A%=B;
         String tail="";
-
         while(tail.length()<20){
-            a*=10;
-            if(a==0){
-                tail+="0";
-            }else{
-                while(a<b){
-                    tail+="0";
-                    a*=10;
-                }
-                tail+=a/b;
-                a%=b;
-            }
+            A*=10;
+            tail+=A/B;
+            A%=B;
         }
-        tail = tail.substring(0,20);
-        String st = head + "." + tail;
-        System.out.printf(st);
+        String res =head + "." + tail;
+        System.out.println(res);
+
     }
 }
