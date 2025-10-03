@@ -7,7 +7,7 @@ public class Main {
         int a=sc.nextInt();
 
         for(int i=1; i<=5; i++){
-            System.out.print(i*7+" ");
+            System.out.print(i*a+" ");
         }
 
             
