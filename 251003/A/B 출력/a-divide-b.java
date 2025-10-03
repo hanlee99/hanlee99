@@ -23,6 +23,7 @@ public class Main {
                 a%=b;
             }
         }
+        tail = tail.substring(0,20);
         String st = head + "." + tail;
         System.out.printf(st);
     }
