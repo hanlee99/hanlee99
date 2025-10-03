@@ -6,7 +6,7 @@ public class Main {
 
         int A=sc.nextInt();
         int B=sc.nextInt();
-        for(int i=B; i>=A; i--){
+        for(int i=Math.max(A,B); i>=Math.min(A,B); i--){
             System.out.print(i+" ");
         }
 
