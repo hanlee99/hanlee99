@@ -3,12 +3,15 @@ public class Main {
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
+
         while(sc.hasNext()){
-            int a = sc.nextInt();
+            int a=sc.nextInt();
             if(a==0){
                 break;
+            }else{
+                System.out.println(a);
             }
-            System.out.println(a);
         }
+
     }
 }
