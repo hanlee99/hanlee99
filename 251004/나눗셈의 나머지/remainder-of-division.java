@@ -9,7 +9,7 @@ public class Main {
         int B=sc.nextInt();
         int sum=0;
         int[] arr = new int[B];
-        while(A>=1){
+        while(A>1){
             arr[A%B]++;
             A/=B;
         }
