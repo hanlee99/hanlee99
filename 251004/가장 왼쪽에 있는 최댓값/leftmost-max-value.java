@@ -13,16 +13,13 @@ public class Main {
 
         while(i>=0){
             int max=0;
-            if(i==0){
-                System.out.print(1);
-                break;
-            }
+            
             for(int j=0; j<=i; j++){
                 max=Math.max(max, arr[i]);
             }
             for(int j=0; j<=i; j++){
                 if(arr[j] == max){
-                    System.out.print(j+1+" ");
+                    System.out.print((j+1)+" ");
                     i=j-1;
                     break;
                 }
