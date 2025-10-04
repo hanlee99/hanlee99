@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        // Please write your code here.
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int cnt=1;
+        for(int i=1; i<=N; i++){
+            
+            for(int j=1; j<=N; j++){
+                if(cnt==10) {
+                    cnt=1;
+                }
+                String res = j>=i ? cnt+" " : "  ";
+                System.out.print(res);
+                if(!res.equals("  "))cnt++;
+            }
+            System.out.println();
+        }
+    }
+}
