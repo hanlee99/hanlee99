@@ -13,6 +13,10 @@ public class Main {
 
         while(i>=0){
             int max=0;
+            if(i==0){
+                System.out.print(arr[0]);
+                break;
+            }
             for(int j=0; j<=i; j++){
                 max=Math.max(max, arr[i]);
             }
