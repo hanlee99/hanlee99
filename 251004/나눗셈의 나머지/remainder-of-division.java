@@ -4,11 +4,11 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int[] arr = new int[10];
+        
         int A=sc.nextInt();
         int B=sc.nextInt();
         int sum=0;
-
+        int[] arr = new int[B];
         while(A>0){
             arr[A%B]++;
             A/=B;
