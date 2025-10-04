@@ -6,18 +6,19 @@ public class Main {
 
         int N=sc.nextInt();
         for(int i=1; i<=N*2; i++){
-            int in = i<=N ? i : N - (i-N) +1;
+           int in = i<=N ? i : N - (i-N-1);
 
             if(in%2!=0){
-                in = (in-1)/2;
+                in = (in+1)/2 - 1;
                 for(int j=1; j<=N-in; j++){
                     System.out.print("* ");
                 }
             }else{
-                for(int j=1; j<in; j++){
+                for(int j=1; j<=in/2; j++){
                     System.out.print("* ");
                 }
             }
+            
             System.out.println();
         }
     }
