@@ -14,7 +14,7 @@ public class Main {
         while(i>=0){
             int max=0;
             if(i==0){
-                System.out.print(arr[0]);
+                System.out.print(1);
                 break;
             }
             for(int j=0; j<=i; j++){
