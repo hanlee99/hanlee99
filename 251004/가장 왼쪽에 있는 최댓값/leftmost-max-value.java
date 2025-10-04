@@ -19,7 +19,7 @@ public class Main {
                 break;
             }
             for(int j=0; j<=i; j++){
-                max=Math.max(max, arr[i]);
+                max=Math.max(max, arr[j]);
             }
             for(int j=0; j<=i; j++){
                 if(arr[j] == max){
