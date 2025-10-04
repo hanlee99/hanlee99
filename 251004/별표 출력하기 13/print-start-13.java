@@ -9,8 +9,7 @@ public class Main {
            int in = i<=N ? i : N - (i-N-1);
 
             if(in%2!=0){
-                in = (in+1)/2 - 1;
-                for(int j=1; j<=N-in; j++){
+                for(int j=1; j<=N-(in/2); j++){
                     System.out.print("* ");
                 }
             }else{
