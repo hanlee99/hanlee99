@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int res=0;
         while(sc.hasNext()){
-            System.out.print(sc.next() + " ");
+            System.out.println(sc.next());
         }
         
     }
