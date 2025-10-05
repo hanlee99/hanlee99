@@ -23,7 +23,10 @@ public class Main {
                 if(bcnt==1) start=i;
                 if(bcnt==n) break;
             }
-            if(bcnt!=n) break;          
+            if(bcnt!=n) {
+                System.out.println(sb.toString());
+                break;
+            }          
                 
             StringBuilder sb2 = new StringBuilder();
             for(int i=0; i<sb.length(); i++){
@@ -34,6 +37,6 @@ public class Main {
             }
             sb=sb2;                     
         }
-        System.out.println(sb.toString());
+        
     }
 }
