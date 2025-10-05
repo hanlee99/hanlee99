@@ -8,23 +8,49 @@ public class Main {
         String B=sc.next();
         int n=B.length();
         StringBuilder sb = new StringBuilder(A);
+        int[] lps = new int[n];
 
-        while(true){    
+        int k=1; int len=0;
+        while(k<n){
+            if(B.charAt(k) == B.charAt(len)){
+                len++;
+                lps[k]=len;
+                k++;
+            }else{
+                if(len!=0){
+                    len = lps[len-1];
+                }else{
+                    lps[k]=0;
+                    k++;
+                }
+            }
+
+        }
+
+        while(sb.length()>=n){    
             int bcnt=0;
             int start=0;
 
             for(int i=0; i<sb.length();i++){
                 char c = sb.charAt(i);
-                if(c==B.charAt(bcnt)){
+                
+                if(B.charAt(bcnt) == c){
                     bcnt++;
+
+                    if(bcnt==n){
+                        start=i-n+1;
+                        break;
+                    }
                 }else{
-                    bcnt=c==B.charAt(0) ? 1 : 0;
+                    if(bcnt!=0){
+                        bcnt=lps[bcnt-1];
+                        i--;
+                    }
                 }
-                if(bcnt==1) start=i;
-                if(bcnt==n) break;
             }
+
             if(bcnt!=n) {
-                System.out.println(sb.toString());
+                
                 break;
             }          
                 
@@ -37,6 +63,7 @@ public class Main {
             }
             sb=sb2;                     
         }
-        
+
+        System.out.println(sb.toString());
     }
 }
