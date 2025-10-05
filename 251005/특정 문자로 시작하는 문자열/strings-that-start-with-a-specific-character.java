@@ -5,8 +5,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int N=sc.nextInt();
         int res=0;  int sum=0;
-        String[] words = new String[4];
-        for(int i=0; i<4; i++){
+        String[] words = new String[N];
+        for(int i=0; i<N; i++){
             words[i]=sc.next();
         }
         char c=sc.next().charAt(0);
