@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        // Please write your code here.
+        Scanner sc = new Scanner(System.in);
+        int sum=0;
+
+        for(int i=0; i<2; i++){
+            String st=sc.next();
+            StringBuilder sb = new StringBuilder();
+            for(char c : st.toCharArray()){
+                if(c>='0'&&c<='9'){
+                    sb.append(c);
+                }
+            }
+            sum+=Integer.parseInt(sb.toString());
+        }
+
+        System.out.println(sum);
+        
+    }
+}
