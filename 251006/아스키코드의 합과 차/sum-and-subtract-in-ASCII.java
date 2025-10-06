@@ -1,12 +1,17 @@
-import java.util.Scanner;
+import java.io.*;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         // Please write your code here.
-        Scanner sc = new Scanner(System.in);
-        char a=sc.next().charAt(0);
-        char b=sc.next().charAt(0);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String[] input = br.readLine().split(" ");
 
-        System.out.println((a+b) + " " + (Math.max(a,b) - Math.min(a,b)) );
+        char a=input[0].charAt(0);
+        char b=input[1].charAt(0);
+
+        int sum=a+b;
+        int diff=Math.abs(a-b);
+
+        System.out.print(sum+" " + diff);
 
     }
 }
