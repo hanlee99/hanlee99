@@ -4,6 +4,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int cnt=0;
+        int answer=-1;
         boolean flag=false;
         char[] A=sc.next().toCharArray();
         char[] B=sc.next().toCharArray();
@@ -11,18 +12,19 @@ public class Main {
         for(int i=1; i<A.length; i++){
             cnt++;
             int j=0;
-            if(A[i] == B[0]){
-                for(char c : B){
-                    if(c == A[(i+j)%A.length]) j++;
-                    else break;
+            for(char c : B){
+                if(c != A[(i+j)%A.length]){
+                    j=0;
+                    break;
                 }
+                j++;
             }
-            if(j == A.length) {
-                flag=true;
-                break; 
+            if(j==A.length) {
+                answer=cnt;
+                break;
             }
         }
-        if(!flag) cnt=-1;
-        System.out.println(cnt);
+        
+        System.out.println(answer);
     }
 }
