@@ -7,20 +7,18 @@ public class Main {
         char[] A=sc.next().toCharArray();
         char[] B=sc.next().toCharArray();
 
-        for(int i=0; i<A.length; i++){
-            int comp=0;
+        for(int i=1; i<A.length; i++){
+            cnt++;
+            int j=0;
             if(A[i] == B[0]){
-                int j=i;
                 for(char c : B){
-                    if(c != A[j%A.length]) break;
-                    j++;
-                    comp++;
+                    if(c == A[(i+j)%A.length]) j++;
+                    else break;
                 }
             }
-            if(comp == A.length) break;
-            cnt++;
+            if(j == A.length) break;
+            if(cnt==A.length-1) cnt=-1;
         }
-        if(cnt==A.length) cnt=-1;
 
         System.out.println(cnt);
     }
