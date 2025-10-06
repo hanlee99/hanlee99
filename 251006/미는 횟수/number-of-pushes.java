@@ -16,7 +16,7 @@ public class Main {
                 }
             }
             if(same) {
-                cnt=i;
+                cnt=A.length-i;
                 break;
             }
         }
