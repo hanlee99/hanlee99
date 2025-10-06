@@ -4,6 +4,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int cnt=0;
+        boolean flag=false;
         char[] A=sc.next().toCharArray();
         char[] B=sc.next().toCharArray();
 
@@ -16,10 +17,12 @@ public class Main {
                     else break;
                 }
             }
-            if(j == A.length) break;
-            if(cnt==A.length-1) cnt=-1;
+            if(j == A.length) {
+                flag=true;
+                break; 
+            }
         }
-
+        if(!flag) cnt=-1;
         System.out.println(cnt);
     }
 }
