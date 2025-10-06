@@ -7,7 +7,7 @@ public class Main {
         char[] A=sc.next().toCharArray();
         char[] B=sc.next().toCharArray();
 
-        for(int i=1; i<A.length; i++){
+        for(int i=A.length-1; i>=0; i--){
             boolean same=true;
             for(int j=0; j<B.length; j++){
                 if(B[j] != A[(i+j)%A.length]){
