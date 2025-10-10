@@ -31,10 +31,8 @@ public class Main {
                 int a=Integer.parseInt(dates1[j]);
                 int b=Integer.parseInt(dates2[j]);
 
-                if(a>b){
-                    res=weatherDatas[i];
-                    break;
-                }else{
+                if(a!=b){
+                    if(a>b) res=weatherDatas[i];
                     break;
                 }
             }
