@@ -12,13 +12,13 @@ public class Main {
             regions[i] = sc.next();
         }
         // Please write your code here.
-        PersonalInfo[] persons = new PersonalInfo[3];
-        for(int i=0; i<3; i++){
+        PersonalInfo[] persons = new PersonalInfo[n];
+        for(int i=0; i<n; i++){
             persons[i] = new PersonalInfo(names[i],addresses[i],regions[i]);
         }
         PersonalInfo person = persons[0];
 
-        for(int i=1; i<3; i++){
+        for(int i=1; i<n; i++){
             if(person.name.compareTo(persons[i].name)<0) {
                 person= persons[i]; 
             }
