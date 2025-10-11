@@ -17,7 +17,7 @@ public class Main {
         for(int i=1; i<m2; i++){
             sumDay2+=month[i];
         }
-        int diff = sumDay2-sumDay1+1;
+        int diff = Math.abs(sumDay2-sumDay1+1);
         String res = day[diff%7];
         System.out.println(res);
     }
