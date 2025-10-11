@@ -9,6 +9,7 @@ public class Main {
         int sum=0;
         int minute1 = A*24*60+B*60+C;
         int minute2 = 11*24*60+11*60+11;
-        System.out.println((minute1-minute2));
+        int res = minute1>=minute2 ? minute1-minute2 : -1;
+        System.out.println(res);
     }
 }
