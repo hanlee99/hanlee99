@@ -22,14 +22,12 @@ public class Main {
 
         int sumDay1 = d1;
         int sumDay2 = d2;
-        for(int i=1; i<m1; i++){
-            sumDay1+=month[i];
-        }
-        for(int i=1; i<m2; i++){
-            sumDay2+=month[i];
-        }
+        for(int i=1; i<m1; i++) sumDay1+=month[i];
+        
+        for(int i=1; i<m2; i++) sumDay2+=month[i];
+        
         int diff=sumDay2-sumDay1;
-        int sum = (diff%7<=targetDiff) ? diff/7+1 : diff/7;
+        int sum = (diff%7<targetDiff) ? diff/7 : diff/7+1;
         System.out.println(sum);
     }
 }
