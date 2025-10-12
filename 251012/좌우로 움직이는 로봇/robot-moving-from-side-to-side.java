@@ -45,21 +45,16 @@ public class Main {
             }
         }
         int total = Math.max(aTotalTime, bTotalTime);
-        int lastA = aTimeLine[aTotalTime];
-        int lastB = bTimeLine[bTotalTime];
-
         int cnt=0;
         boolean visited = false;
 
         for(int i=1; i<=total; i++){
-            int apos = (i<=aTotalTime) ? aTimeLine[i] : lastA;
-            int bpos = (i<=bTotalTime) ? bTimeLine[i] : lastB;
-
-            if(apos == bpos){
-                if(!visited) cnt++;
-                visited=true;
-            }else  visited=false;
-            //System.out.println("<"+i+"> "+aTimeLine[i]+" "+bTimeLine[i]+" "+cnt+" ");
+            int aPrev = (i-1<=aTotalTime) ? aTimeLine[i-1] : aTimeLine[aTotalTime];
+            int bPrev = (i-1<=bTotalTime) ? bTimeLine[i-1] : bTimeLine[bTotalTime];
+            int aNow = (i<=aTotalTime) ? aTimeLine[i] : aTimeLine[aTotalTime];
+            int bNow = (i<=bTotalTime) ? bTimeLine[i] : bTimeLine[bTotalTime];
+            
+            if(aPrev!=bPrev && aNow==bNow) cnt++;
         }
         //System.out.println("\n");
         
