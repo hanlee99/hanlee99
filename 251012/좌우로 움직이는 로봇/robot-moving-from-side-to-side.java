@@ -44,32 +44,25 @@ public class Main {
                 idx++;
             }
         }
+        int total = Math.max(aTotalTime, bTotalTime);
+        int lastA = aTimeLine[aTotalTime];
+        int lastB = bTimeLine[bTotalTime];
+
         int cnt=0;
         boolean visited = false;
-        int max=Math.max(aTotalTime,bTotalTime);
-        int min=Math.min(aTotalTime,bTotalTime);
-        for(int i=1; i<=min; i++){
-            if(aTimeLine[i]==bTimeLine[i]){
-                if(!visited){
-                    cnt++;
-                    visited=true;
-                }
+
+        for(int i=1; i<=total; i++){
+            int apos = (i<=aTotalTime) ? aTimeLine[i] : lastA;
+            int bpos = (i<=bTotalTime) ? bTimeLine[i] : lastB;
+
+            if(apos == bpos){
+                if(!visited) cnt++;
+                visited=true;
             }else  visited=false;
             //System.out.println("<"+i+"> "+aTimeLine[i]+" "+bTimeLine[i]+" "+cnt+" ");
         }
         //System.out.println("\n");
-        int[] timeLine = aTotalTime>bTotalTime ? aTimeLine : bTimeLine;
-        int target=aTotalTime>bTotalTime ? bTimeLine[bTotalTime] : aTimeLine[aTotalTime];
-        //System.out.println(target+"\n");
-        for(int i=min+1; i<=max; i++){
-            if(target == timeLine[i]){
-                if(!visited){
-                    cnt++;
-                    visited=true;
-                }
-            }else  visited=false;
-            //System.out.println("<"+i+"> "+timeLine[i]+" "+cnt);
-        }
+        
         System.out.println(cnt);
         // Please write your code here.
     }
