@@ -6,10 +6,10 @@ public class Main {
         // Please write your code here.
     
     StringBuilder sb = new StringBuilder();
-    while(n>0){
+    do{
         sb.append(n%2);
         n/=2;
-    }
+    }while(n>0);
     System.out.println(sb.reverse().toString());
     }
 }
