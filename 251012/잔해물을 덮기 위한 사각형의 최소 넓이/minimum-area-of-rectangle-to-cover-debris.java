@@ -4,14 +4,10 @@ public class Main {
     public static final int MAX_N = 2000;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int rect1_x1 = sc.nextInt();
-        int rect1_y1 = sc.nextInt();
-        int rect1_x2 = sc.nextInt();
-        int rect1_y2 = sc.nextInt();
-        int rect2_x1 = sc.nextInt();
-        int rect2_y1 = sc.nextInt();
-        int rect2_x2 = sc.nextInt();
-        int rect2_y2 = sc.nextInt();
+        int rect1_x1 = sc.nextInt();    int rect1_y1 = sc.nextInt();
+        int rect1_x2 = sc.nextInt();    int rect1_y2 = sc.nextInt();
+        int rect2_x1 = sc.nextInt();    int rect2_y1 = sc.nextInt();
+        int rect2_x2 = sc.nextInt();    int rect2_y2 = sc.nextInt();
         // Please write your code here.
         int[] board = new int[MAX_N];
         int n = MAX_N/2;
@@ -20,7 +16,10 @@ public class Main {
 
         
         int area = (rect1.x2-rect1.x1)*(rect1.y2-rect1.y1);
-        if(rect1.x1>=rect2.x1&&rect1.x2<=rect2.x2){
+        if(rect1.x1==rect2.x1&&rect1.x2==rect2.x2&&
+           rect1.y1==rect2.y1&&rect1.y2==rect2.y2){
+            area = 0;
+        }else if(rect1.x1>=rect2.x1&&rect1.x2<=rect2.x2){
             int y = rect1.y1<rect2.y1 ? rect2.y1-rect1.y1 : rect1.y2-rect2.y2;
             area = (rect1.x2-rect1.x1) * y;
         }else if(rect1.y1>=rect2.y1&&rect1.y2<=rect2.y2){
