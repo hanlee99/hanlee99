@@ -11,7 +11,7 @@ public class Main {
         for(int i=0; i<n; i++){
             direction[i] = sc.next().charAt(0);
             Atime[i] = sc.nextInt();
-            sum+=direction[i];
+            sum+=Atime[i];
         }
         // Please write your code here.
         int[] AtimeLine = new int[sum+1];
