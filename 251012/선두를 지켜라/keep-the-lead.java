@@ -44,13 +44,13 @@ public class Main {
         for(int i=1; i<=timeA; i++){
             char h;
             if(AtimeLine[i]>BtimeLine[i]) h='A';
-            if(AtimeLine[i]<BtimeLine[i]) h='B';
+            else if(AtimeLine[i]<BtimeLine[i]) h='B';
             else h='0';
 
             if(head!=h && h!='0') cnt++;
             head=h;
-            //System.out.println(AtimeLine[i]+" "+BtimeLine[i]+" "+head+" "+cnt);
+            System.out.println(AtimeLine[i]+" "+BtimeLine[i]+" "+head+" "+cnt);
         }
-        System.out.println(cnt);
+        System.out.println(cnt-1);
     }
 }
