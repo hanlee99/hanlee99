@@ -49,7 +49,7 @@ public class Main {
 
             if(head!=h && h!='0') cnt++;
             head=h;
-            System.out.println(AtimeLine[i]+" "+BtimeLine[i]+" "+head+" "+cnt);
+            //System.out.println(AtimeLine[i]+" "+BtimeLine[i]+" "+head+" "+cnt);
         }
         System.out.println(cnt-1);
     }
