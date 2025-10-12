@@ -13,6 +13,8 @@ public class Main {
         // Please write your code here.
         int[][] board = new int[MAX_N][MAX_N];
         for(int k=0; k<n; k++){
+            x[k] += MAX_N/2;
+            y[k] += MAX_N/2;
             for(int i=x[k]; i<x[k]+8; i++){
                 for(int j=y[k]; j<y[k]+8; j++){
                     board[i][j] = 1;
