@@ -20,12 +20,16 @@ public class Main {
             area = 0;
         }
         else if(rect1.x1>=rect2.x1 && rect1.x2<=rect2.x2){
-            int y = Math.min(rect1.y2,rect2.y2) - Math.max(rect1.y1, rect2.y1);
-            area -= (rect1.x2-rect1.x1) * y;
+            if(rect1.y2>rect2.y1 && rect1.y1<rect2.y2){
+                int y = Math.min(rect1.y2,rect2.y2) - Math.max(rect1.y1, rect2.y1);
+                area -= (rect1.x2-rect1.x1) * y;
+            }
         }
         else if(rect1.y1>=rect2.y1&&rect1.y2<=rect2.y2){
-            int x = Math.min(rect1.x2,rect2.x2) - Math.max(rect1.x1,rect2.x1);
-            area -= (rect1.y2-rect1.y1) * x;
+            if(rect1.x2>rect2.x1 && rect1.x1<rect2.x2){
+                int x = Math.min(rect1.x2,rect2.x2) - Math.max(rect1.x1,rect2.x1);
+                area -= (rect1.y2-rect1.y1) * x;
+            }
         }
         System.out.println(area);
     }
