@@ -20,17 +20,20 @@ public class Main {
             return a[0]-b[0];
         });
         for(int i=0; i<shakes.length; i++){
-            int x=shakes[i][1];
-            int y=shakes[i][2];
-            if(carrier[x]!=0 && carrier[y]!=0){
-                carrier[x] = carrier[x]-1==0 ? -1 : carrier[x]-1;
-                carrier[y] = carrier[y]-1==0 ? -1 : carrier[y]-1;
-            }else if(carrier[x]!=0){
-                if(carrier[x]!=-1) carrier[y]=K;
-                carrier[x] = carrier[x]-1==0 ? -1 : carrier[x]-1;
-            }else if(carrier[y]!=0){
-                if(carrier[y]!=-1) carrier[x]=K;
-                carrier[y] = carrier[y]-1==0 ? -1 : carrier[y]-1;
+            int x=shakes[i][1]; int y=shakes[i][2];
+            boolean xInf=carrier[x]!=0; boolean yInf=carrier[y]!=0;
+
+            if(xInf && yInf){
+                carrier[x] = (carrier[x]-1>0) ? carrier[x]-1 : -1;
+                carrier[y] = (carrier[y]-1>0) ? carrier[y]-1 : -1;
+            }
+            else if(xInf && carrier[x]>0){ 
+                carrier[x] = carrier[x]-1>0 ? carrier[x]-1 : -1;
+                carrier[y] = K;          
+            }
+            else if(yInf && carrier[y]>0){
+                carrier[y] = carrier[y]-1>0 ? carrier[y]-1 : -1;
+                carrier[x]=K;
             }
             //System.out.println(x +" "+y+" "+carrier[x]+" "+carrier[y]);
         }
