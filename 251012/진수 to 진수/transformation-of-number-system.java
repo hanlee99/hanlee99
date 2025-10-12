@@ -14,7 +14,7 @@ public class Main {
     private static int toDec(int A, String N){
         int n=0;
         for(int i=0; i<N.length(); i++){
-            int k = N.charAt(i)=='1' ? 1 : 0;
+            int k = N.charAt(i)-'0';
             n = n*A + k;
         }
         return n;
