@@ -36,7 +36,7 @@ public class Main {
             }
         }
         int res=-1;
-        for(int i=1; i<sum; i++){
+        for(int i=1; i<=sum; i++){
             if(AtimeLine[i] == BtimeLine[i]){
                 res=i;
                 break;
