@@ -25,12 +25,12 @@ public class Main {
             if(carrier[x]!=0 && carrier[y]!=0){
                 carrier[x] = carrier[x]-1==0 ? -1 : carrier[x]-1;
                 carrier[y] = carrier[y]-1==0 ? -1 : carrier[y]-1;
-            }else if(carrier[x]!=0 && carrier[x]!=-1){
+            }else if(carrier[x]!=0){
+                if(carrier[x]!=-1) carrier[y]=K;
                 carrier[x] = carrier[x]-1==0 ? -1 : carrier[x]-1;
-                carrier[y] = K;
-            }else if(carrier[y]!=0 && carrier[y] !=-1){
+            }else if(carrier[y]!=0){
+                if(carrier[y]!=-1) carrier[x]=K;
                 carrier[y] = carrier[y]-1==0 ? -1 : carrier[y]-1;
-                carrier[x] = K; 
             }
             //System.out.println(x +" "+y+" "+carrier[x]+" "+carrier[y]);
         }
