@@ -14,8 +14,8 @@ public class Main {
         // Please write your code here.
         int cnt=0;
         
-        for(int i=1; i<R-1; i++){
-            for(int j=1; j<C-1; j++){
+        for(int i=1; i<R; i++){
+            for(int j=1; j<C; j++){
                 char cur = grid[0][0];
 
                 if(grid[i][j] == cur) continue;
