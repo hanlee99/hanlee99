@@ -13,15 +13,16 @@ public class Main {
         }
         // Please write your code here.
         int cnt=0;
-        char cur = grid[0][0];
+        
         for(int i=1; i<R-1; i++){
             for(int j=1; j<C-1; j++){
+                char cur = grid[0][0];
 
-                if(grid[i][j] == 'W') continue;
+                if(grid[i][j] == cur) continue;
                 cur=grid[i][j];
                 for(int a=i+1; a<R-1; a++){
                     for(int b=j+1; b<C-1; b++){
-                        if(grid[a][b]=='W') cnt++;
+                        if(cur != grid[a][b]) cnt++;
                     }
                 }
                 
