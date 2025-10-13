@@ -1,11 +1,12 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        final int MIN = Integer.MIN_VALUE;
         Scanner sc = new Scanner(System.in);
         String a = sc.next();
         // Please write your code here.
         StringBuilder sb = new StringBuilder(a);
-        int max=toDec(sb);
+        int max=MIN;
         for(int i=0; i<a.length(); i++){
             char ch = a.charAt(i)=='1' ? '0' : '1';
             sb.setCharAt(i, ch);
