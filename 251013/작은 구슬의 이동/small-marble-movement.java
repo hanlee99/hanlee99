@@ -10,17 +10,16 @@ public class Main {
         int C = sc.nextInt();
         String D = sc.next();
         // Please write your code here.
-        int[] dx = {0, -1, 1, 0};
-        int[] dy = {1, 0, 0, -1};
-        int time=0;
+        int[] dr = {0, -1, 1, 0};
+        int[] dc = {1, 0, 0, -1};
         arrN=N;
         int dir = getDir(D.charAt(0));
         for(int i=1; i<=T; i++){
-            int nx=R+dx[dir];
-            int ny=C+dy[dir];
-            if(isRange(nx, ny)){
-                R=nx;
-                C=ny;
+            int nr= R+dr[dir];
+            int nc= C+dc[dir];
+            if(isRange(nr, nc)){
+                R=nr;
+                C=nc;
             }else{
                 dir=3-dir;
             }
