@@ -10,10 +10,11 @@ public class Main {
         int C = sc.nextInt();
         String D = sc.next();
         // Please write your code here.
-        int[] dr = {0, -1, 1, 0};
+        int[] dr = {0, 1, -1, 0};
         int[] dc = {1, 0, 0, -1};
         arrN=N;
         int dir = getDir(D.charAt(0));
+        
         for(int i=1; i<=T; i++){
             int nr= R+dr[dir];
             int nc= C+dc[dir];
@@ -23,6 +24,7 @@ public class Main {
             }else{
                 dir=3-dir;
             }
+            //System.out.println(R+" "+C+" "+dir);
         }
         System.out.println(R +" " + C);
 
