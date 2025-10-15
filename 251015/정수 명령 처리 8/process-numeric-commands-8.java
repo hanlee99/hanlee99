@@ -34,6 +34,17 @@ public class Main {
 }
 
 class MyLinkedList{
+    private static class Node{
+    int data;
+    Node prev;
+    Node next;
+    public Node(int data){
+        this.data=data;
+        prev=null;
+        next=null;
+    }
+}
+
     Node head;
     Node tail;
     int len=0;
