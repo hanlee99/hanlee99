@@ -25,8 +25,13 @@ public class Main {
                 swap(arr, i, j);
             }
         }
-
         swap(arr, i+1, high);
+
+        /*System.out.print(pivot+" ");
+        for(int k=0; k<arr.length; k++){
+            System.out.print(arr[k]+" ");
+        }
+        System.out.println();*/
         
         return i+1;
     }
@@ -41,7 +46,7 @@ public class Main {
 
     private static int select_pivot(int[] arr,int low, int high){
         if(high-low+1>3){
-            swap(arr, (high-low/2), high);
+            swap(arr, (high-low)/2, high);
         }
         return arr[high];
     }
