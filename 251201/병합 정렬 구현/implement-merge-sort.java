@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
+    public static int[] temp;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -9,6 +10,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         // Please write your code here.
+        temp = new int[arr.length];
         merge_sort(arr, 0, arr.length-1);
         for(int i=0; i<arr.length; i++)
             System.out.print(arr[i]+" ");
@@ -27,7 +29,6 @@ public class Main {
     private static void merge(int[] arr, int low, int mid, int high){
         int i=low;
         int j=mid+1;
-        int[] temp = new int[arr.length];
         int k=0;
         while(i<=mid && j<=high){
             if(arr[i]<=arr[j]){
@@ -45,6 +46,7 @@ public class Main {
         }
         while(j<=high){
             temp[k]=arr[j];
+            k++;
             j++;
         }
         for(int n=0; n<k; n++) 
