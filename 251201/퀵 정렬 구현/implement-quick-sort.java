@@ -46,7 +46,7 @@ public class Main {
 
     private static int select_pivot(int[] arr,int low, int high){
         if(high-low+1>3){
-            swap(arr, (high-low)/2, high);
+            swap(arr,low + (high-low)/2, high);
         }
         return arr[high];
     }
