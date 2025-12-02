@@ -35,9 +35,9 @@ public class Main {
                     x=i+2;  y=j+2;
                     break;
                 }          
-                if(i-5>=0 && j-5>=0 && is_win(arr, i, j, 3)){
+                if(i+5<n && j-5>=0 && is_win(arr, i, j, 3)){
                     win = pin;
-                    x=i-2;  y=j-2;
+                    x=i+2;  y=j-2;
                     break;
                 }
             }
@@ -61,7 +61,7 @@ public class Main {
             di++;
             dj++;
         }else{
-            di--;
+            di++;
             dj--;
         }
         
