@@ -20,22 +20,22 @@ public class Main {
 
                 if(pin == 0) continue;
 
-                if(i+5<n && is_win(arr, i, j, 0)){
+                if(i+4<n && is_win(arr, i, j, 0)){
                     win = pin;
                     x=i+2;  y=j;
                     break;
                 }   
-                if(j+5<n && is_win(arr, i, j, 1)){               
+                if(j+4<n && is_win(arr, i, j, 1)){               
                     win = pin;
                     x=i;    y=j+2;
                     break;
                 }   
-                if(i+5<n && j+5<n && is_win(arr, i, j, 2)){
+                if(i+4<n && j+4<n && is_win(arr, i, j, 2)){
                     win = pin;
                     x=i+2;  y=j+2;
                     break;
                 }          
-                if(i+5<n && j-5>=0 && is_win(arr, i, j, 3)){
+                if(i+4<n && j-4>=0 && is_win(arr, i, j, 3)){
                     win = pin;
                     x=i+2;  y=j-2;
                     break;
