@@ -11,7 +11,7 @@ public class Main {
         }
         // Please write your code here.
 
-        int diff=100;
+        int diff=Integer.MAX_VALUE;
 
         int sum=0;
         for(int k : arr){
@@ -19,9 +19,9 @@ public class Main {
         }
 
         for(int i=0; i<n-1; i++){
-            int k = sum-arr[i];
             for(int j=i+1; j<n; j++){
-                diff = Math.min(diff, Math.abs(s-(k-arr[j])));
+                int k=sum-arr[i]-arr[j];
+                diff = Math.min(diff, Math.abs(s-k));
             }
         }
         System.out.println(diff);
