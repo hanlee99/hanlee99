@@ -1,27 +1,24 @@
 import java.util.Scanner;
-public class Main {
+public class Main {        
+    public static final int MAX_NUM = 10000;
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
         int[] point = new int[n];
         int[] score = new int[n];
-        int max=0;
+        int[] lines = new int[MAX_NUM+1];
         for (int i = 0; i < n; i++) {
             int pos = sc.nextInt();
             char c = sc.next().charAt(0);
-            max = Math.max(max, pos);
-            point[i] = pos;
-            score[i] = c=='G' ? 1 : 2;
+            lines[pos] = c=='G' ? 1 : 2;
         }
         // Please write your code here.
 
-        int[] lines = new int[max+1];
-        for(int i=0; i<n; i++){
-            lines[point[i]] = score[i];
-        }
         int res=0;
-        for(int i=0; i+k<=max; i++){
+        for(int i=1; i<=MAX_NUM-k; i++){
             int maxPoint=0;
             for(int j=0; j<=k; j++){
                 maxPoint+=lines[i+j];
