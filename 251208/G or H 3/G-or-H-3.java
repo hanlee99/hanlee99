@@ -12,8 +12,7 @@ public class Main {
             char c = sc.next().charAt(0);
             max = Math.max(max, pos);
             point[i] = pos;
-            if(c=='G') score[i]=1;
-            if(c=='H') score[i]=2;
+            score[i] = c=='G' ? 1 : 2;
         }
         // Please write your code here.
 
