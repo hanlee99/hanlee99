@@ -22,7 +22,7 @@ public class Main {
             lines[point[i]] = score[i];
         }
         int res=0;
-        for(int i=1; i<max+1-k; i++){
+        for(int i=1; i<=max-k; i++){
             int maxPoint=0;
             for(int j=0; j<=k; j++){
                 maxPoint+=lines[i+j];
