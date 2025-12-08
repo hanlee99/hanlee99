@@ -22,14 +22,13 @@ public class Main {
             lines[point[i]] = score[i];
         }
         int res=0;
-        for(int i=1; i<=max-k; i++){
+        for(int i=1; i+k<=max; i++){
             int maxPoint=0;
             for(int j=0; j<=k; j++){
                 maxPoint+=lines[i+j];
             }
             res = Math.max(res, maxPoint);
             //System.out.println(res+" "+maxPoint);
-
         }
         System.out.println(res);
 
