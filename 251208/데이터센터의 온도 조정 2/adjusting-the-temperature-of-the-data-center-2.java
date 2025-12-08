@@ -18,7 +18,7 @@ public class Main {
         }
         // Please write your code here.
         int work=0;
-        for(int i=min-1; i<=max+1; i++){
+        for(int i=0; i<=1000; i++){
             int curWork=0;
             for(int j=0; j<n; j++){
                 if(i<ta[j]){
