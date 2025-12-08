@@ -23,7 +23,7 @@ public class Main {
             for(int j=0; j<n; j++){
                 if(i<ta[j]){
                     curWork+=c;
-                }else if(i<tb[j]){
+                }else if(i<=tb[j]){
                     curWork+=g;
                 }else{
                     curWork+=h;
