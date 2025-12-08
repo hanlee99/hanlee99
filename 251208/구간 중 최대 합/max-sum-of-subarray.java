@@ -11,7 +11,11 @@ public class Main {
 
         int max=0;
         for(int i=0; i<=n-k; i++){
-            max = Math.max(max, arr[i]+arr[i+1]+arr[i+2]);
+            int m=0;
+            for(int j=0; j<k; j++){
+                m+=arr[i+j];
+            }
+            max = Math.max(max, m);
         }
         System.out.println(max);
     }
