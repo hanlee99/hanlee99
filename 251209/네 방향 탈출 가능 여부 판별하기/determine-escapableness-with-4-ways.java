@@ -13,13 +13,15 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
         grid = new int[n][m];
-        queue.add(new int[]{0, 0});
         visited = new boolean[n][m];
-
+        
         for (int i = 0; i < n; i++)
             for (int j = 0; j < m; j++)
                 grid[i][j] = sc.nextInt();
         // Please write your code here.
+        queue.offer(new int[]{0, 0});
+        visited[0][0] = true;
+
         while(!queue.isEmpty()){
             int[] curr = queue.poll();
 
