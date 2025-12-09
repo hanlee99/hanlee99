@@ -17,7 +17,7 @@ public class Main {
                 grid[i][j] = sc.nextInt();
         // Please write your code here.
         dfs(0, 0);
-        int answer = visited[n-1][m-1]==true ? 1 : 0;
+        int answer = visited[n-1][m-1] ? 1 : 0;
         System.out.println(answer);
 
     }
@@ -34,9 +34,7 @@ public class Main {
         }
     }
     private static boolean isRange(int r, int c){
-        if(r>=0 && r<grid.length && c>=0 && c<grid[r].length){
-            return true;
-        }
-        return false;
+        return r>=0 && r<grid.length && c>=0 && c<grid[r].length
+            
     }
 }
