@@ -19,6 +19,7 @@ public class Main {
                 if(list.size()-1!=i) System.out.print(" ");
             }
             System.out.println();
+            return;
         }
 
         for(int i=curr; i<=n; i++){
