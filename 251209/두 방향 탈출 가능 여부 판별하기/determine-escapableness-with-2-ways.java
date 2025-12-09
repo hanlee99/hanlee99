@@ -34,7 +34,7 @@ public class Main {
         }
     }
     private static boolean isRange(int r, int c){
-        return r>=0 && r<grid.length && c>=0 && c<grid[r].length
+        return (r>=0 && r<grid.length && c>=0 && c<grid[r].length);
             
     }
 }
