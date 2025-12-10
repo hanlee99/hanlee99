@@ -11,12 +11,15 @@ public class Main {
         dp[0]=1;
         int max=0;
         for(int i=0; i<n; i++){
-            for(int j=i-1; j>=0; j--){
+            dp[i]=1;
+            int maxVal=0;
+            for(int j=0; j<i; j++){
+                
                 if(arr[i] > arr[j]){
-                    dp[i] = dp[j];
+                   maxVal = Math.max(maxVal,dp[j]);
                 }
             }
-            dp[i]++;
+            dp[i] += maxVal;
             max=Math.max(max, dp[i]);
         }
         System.out.println(max);
