@@ -11,7 +11,6 @@ public class Main {
         int[] dx = new int[]{-1, 1, 0, 0};
         int[] dy = new int[]{0, 0, -1, 1};
         int[][] grid = new int[n+1][n+1];
-        boolean[][] visited = new boolean[n+1][n+1];
         List<Integer> list = new ArrayList<>();
 
         for (int i = 1; i <= n; i++) {
@@ -28,12 +27,11 @@ public class Main {
             for(int dir=0; dir<4; dir++){
                 int nr=r+dx[dir];
                 int nc=c+dy[dir];
-                if(isRange(nr, nc) && !visited[nr][nc] 
-                && grid[r][c]<grid[nr][nc]){
-                    visited[nr][nc]= true;
+                if(isRange(nr, nc) && grid[r][c]<grid[nr][nc]){
                     list.add(grid[nr][nc]);
                     r=nr;   c=nc;
                     flag=true;
+                    break;
                 }
             }
         }
