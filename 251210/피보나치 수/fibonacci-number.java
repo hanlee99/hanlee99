@@ -5,11 +5,12 @@ public class Main {
         int n = sc.nextInt();
         // Please write your code here.
         int[] dp =new int[n+1];
-        dp[1]=1;
-        if(n==1){
+        
+        if(n==1 || n==2){
             System.out.println(1);
             return;
         }
+        dp[1]=1;
         dp[2]=1;
 
         for(int i=3; i<n+1; i++){
