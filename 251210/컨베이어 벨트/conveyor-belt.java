@@ -20,17 +20,14 @@ public class Main {
         for(int i=n; i<2*n; i++){
             topNbottom[i] = bottom[i-n];
         }
-        for(int i=0; i<t; i++){
-            int temp=topNbottom[2*n-1];
-            for(int j=2*n-1; j>0; j--){
-                topNbottom[j]=topNbottom[j-1];
-            }
-            topNbottom[0] = temp;
-        }
+        t = t % (2*n);
+        int index = 2*n-t;
 
         for(int i=0; i<2*n; i++){
-            System.out.print(topNbottom[i]+" ");
+            System.out.print(topNbottom[(index+i)%(2*n)] + " ");
             if(i==n-1) System.out.println();
         }
+        
+        
     }
 }
