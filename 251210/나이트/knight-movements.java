@@ -14,6 +14,10 @@ public class Main {
         int r2 = sc.nextInt();
         int c2 = sc.nextInt();
         // Please write your code here.
+        if(r1==r2 && c1==c2) {
+            System.out.println(0);
+            return;
+        }
         queue.offer(new int[]{r1,c1});
         int cnt=-1;
         boolean flag=false;
