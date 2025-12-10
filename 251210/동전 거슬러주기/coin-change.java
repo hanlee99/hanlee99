@@ -10,7 +10,6 @@ public class Main {
         int[] dp = new int[m+1];
         for (int i = 0; i < n; i++){
             coin[i] = sc.nextInt();
-            dp[coin[i]] = 1;
         }
         Arrays.fill(dp, Integer.MAX_VALUE);
         dp[0] = 0;
@@ -18,7 +17,7 @@ public class Main {
         for(int i=1; i<m+1; i++){
             int min=Integer.MAX_VALUE;
             for(int c=0; c<n; c++){
-                if(i-coin[c] >= 0){
+                if(i-coin[c] >= 0 && dp[i-coin[c]] != Integer.MAX_VALUE){
                     dp[i] = Math.min(dp[i], dp[i-coin[c]]+1);
                 }
             }
