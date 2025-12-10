@@ -23,7 +23,7 @@ public class Main {
             }
         }
 
-        int cnt= dp[m] != 0 ? dp[m] : -1;
+        int cnt= dp[m] != Integer.MAX_VALUE ? dp[m] : -1;
         System.out.println(cnt);
     }
 }
