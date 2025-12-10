@@ -14,8 +14,8 @@ public class Main {
 
         int[][] grid = new int[n+1][n+1];
         int[][] bead = new int[n+1][n+1];
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
+        for (int i = 1; i < n+1; i++)
+            for (int j = 1; j < n+1; j++)
                 grid[i][j] = sc.nextInt();
         int[][] marbles = new int[m][2];
         for (int i = 0; i < m; i++) {
@@ -28,8 +28,7 @@ public class Main {
 
             while(!queue.isEmpty()){
                 int[] p=queue.poll();
-                int[] goal = new int[]{0,0};
-                
+                int[] goal = new int[2];
                 for(int dir=0; dir<4; dir++){
                     int nx=p[0]+dx[dir];
                     int ny=p[1]+dy[dir];
@@ -41,10 +40,10 @@ public class Main {
                 bead[goal[0]][goal[1]]++;
                 delete.offer(goal);
             }
+
             while(!delete.isEmpty()){
                 int[] goal = delete.poll();
-                int x=goal[0];
-                int y=goal[1];
+                int x=goal[0];  int y=goal[1];
                 if(bead[x][y]==1){
                     queue.offer(new int[]{x,y});
                     bead[x][y]=0;
@@ -54,8 +53,6 @@ public class Main {
             }
         }
         System.out.println(queue.size()); 
-    
-
     }
     private static boolean isRange(int x, int y){
         return (x>0 && x<=n && y>0 && y<=n);
